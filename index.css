@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
+@import "tailwindcss";
+
+@theme {
+    /* 🔹 Screens / Breakpoints */
+    --breakpoint-sm: 340px;
+    --breakpoint-md: 540px;
+    --breakpoint-lg: 768px;
+    --breakpoint-xl: 1180px;
+
+    /* 🔹 Fonts */
+    --font-jost: "Jost", sans-serif;
+    --font-lobster: "Lobster", sans-serif;
+
+    /* 🔹 Animations */
+    --animate-moving-y: move 3s linear infinite;
+    --animate-rotating: rotate 15s linear infinite;
+    --animate-scaling-up: scaleUp 3s linear infinite;
+
+    /* 🔹 Keyframes */
+    @keyframes move {
+        50% {
+            transform: translateY(-1rem);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scaleUp {
+        0% {
+            transform: scale(0.8);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(0.8);
+        }
+    }
+
+
+
+}
+
+body {
+    @apply bg-green-950 text-white tracking-wider;
+    font-family: var(--font-jost);
+}
+
+.popular__section:hover img {
+    @apply -top-10 duration-400
+}
+
+html {
+    @apply overflow-x-hidden scroll-smooth
+}
+
